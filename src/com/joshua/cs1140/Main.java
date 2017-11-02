@@ -67,7 +67,8 @@ public class Main {
 						// you lose
 					} else {
 						// You win
-					}} break;
+					}
+				} break;
 				case SCISSORS: {
 					if(cpuChoice == ROCK) {
 						// you lose
@@ -76,7 +77,7 @@ public class Main {
 					}
 				} break;
 			}
-			
+
 
 
 
