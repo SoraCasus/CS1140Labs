@@ -1,4 +1,4 @@
-package com.joshua.cs1140.lab6;
+package com.joshua.lab6;
 
 import java.util.Scanner;
 
