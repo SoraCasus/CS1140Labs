@@ -20,61 +20,41 @@ public class Lab7_3 {
 	public static void Run(int steps) {
 		Random random = new Random();
 
-		Vec2 origin = new Vec2(0, 0);
-		Vec2 delta = new Vec2(0, 0);
+		int originX = 0;
+		int originY = 0;
+		int deltaX = 0;
+		int deltaY = 0;
 
 		for (int i = 1; i <= steps; i++) {
 			int dir = random.nextInt(4);
 			switch (dir) {
 				case NORTH: {
-					delta.x++;
+					deltaY++;
 				}
 				break;
 				case EAST: {
-					delta.y++;
+					deltaX++;
 				}
 				break;
 				case SOUTH: {
-					delta.x--;
+					deltaY--;
 				}
 				break;
 				case WEST: {
-					delta.y--;
+					deltaX--;
 				}
 				break;
 				default: {
 				}
 				break;
 			}
-			System.out.println(i + "\t" + delta.toString());
+			System.out.println(i + "\t" + String.format("(%3d , %3d )", deltaX, deltaY));
 		}
 
-		System.out.printf("Distance to lamp post = %4.2f\n", Vec2.Distance(origin, delta));
+		float dx = deltaX - originX;
+		float dy = deltaY - originY;
+		float distance = (float) Math.sqrt(dx * dx + dy * dy);
+		System.out.printf("Distance to lamp post = %4.2f\n", distance);
 
-	}
-
-	private static class Vec2 {
-		int x;
-		int y;
-
-		public Vec2(int x, int y) {
-			this.x = x;
-			this.y = y;
-		}
-
-		public static float Distance(Vec2 a, Vec2 b) {
-			float dx = b.x - a.x;
-			float dy = b.y - a.y;
-			return (float) Math.sqrt(dx * dx + dy * dy);
-		}
-
-		public float Length() {
-			return (float) Math.sqrt(x * x + y * y);
-		}
-
-		@Override
-		public String toString() {
-			return String.format("(%3d , %3d )", x, y);
-		}
 	}
 }

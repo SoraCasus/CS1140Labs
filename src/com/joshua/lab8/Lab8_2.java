@@ -8,20 +8,21 @@ public class Lab8_2 {
 
 		// Output Program Header
 		// Generate options
-	    /*
-      * Pattern 1:          Pattern 2:
-      * 1                   1 2 3 4
-      * 1 2                 1 2 3
-      * 1 2 3               1 2 
-      * 1 2 3 4             1
-      *
-      * Pattern 3:          Pattern 4:
-      *       1             4 3 2 1
-      *     2 1               3 2 1
-      *   3 2 1                 2 1
-      * 4 3 2 1                   1
-      *
+		/*
+		 * Pattern 1:          Pattern 2:
+         * 1                   1 2 3 4
+         * 1 2                 1 2 3
+         * 1 2 3               1 2
+         * 1 2 3 4             1
+         *
+         * Pattern 3:          Pattern 4:
+         *       1             4 3 2 1
+         *     2 1               3 2 1
+         *   3 2 1                 2 1
+         * 4 3 2 1                   1
+         *
          */
+
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Pattern Generator Program (PGP)\n");
